@@ -1,14 +1,15 @@
 var fs = require('fs'),
-    http = require('http'),
-    path = require('path'),
-    methods = require('methods'),
-    express = require('express'),
-    bodyParser = require('body-parser'),
-    session = require('express-session'),
-    cors = require('cors'),
-    passport = require('passport'),
-    errorhandler = require('errorhandler'),
-    mongoose = require('mongoose');
+	   http = require('http'),
+	   path = require('path'),
+	   methods = require('methods'),
+	   express = require('express'),
+	   bodyParser = require('body-parser'),
+	   session = require('express-session'),
+	   cors = require('cors'),
+	   passport = require('passport'),
+	   errorhandler = require('errorhandler'),
+	   mongoose = require('mongoose');
+
 
 var isProduction = process.env.NODE_ENV === 'production';
 
@@ -34,9 +35,12 @@ if (!isProduction) {
 if(isProduction){
   mongoose.connect(process.env.MONGODB_URI);
 } else {
-  mongoose.connect('mongodb://localhost/conduit');
-  mongoose.set('debug', true);
-}
+  mongoose.connect('mongodb://contactjorge:contactjorge@ds111922.mlab.com:11922/mongolab-dimensional-43319');
+  mongoose.set('debug', true);}
+
+
+require('./models/User');
+require('./config/passport');
 
 app.use(require('./routes'));
 

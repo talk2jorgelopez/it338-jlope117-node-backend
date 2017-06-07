@@ -5,13 +5,14 @@
   "main": "app.js",
   "scripts": {
     "start": "node ./app.js",
+	  "dev": "nodemon ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/gothinkster/productionready-node-api.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "1.15.0",
     "cors": "2.7.1",
@@ -32,5 +33,10 @@
     "request": "2.69.0",
     "slug": "0.9.1",
     "underscore": "1.8.3"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/gothinkster/productionready-node-api/issues"
+  },
+  "homepage": "https://github.com/gothinkster/productionready-node-api#readme",
+  "author": "Jorge Lopez"
 }
